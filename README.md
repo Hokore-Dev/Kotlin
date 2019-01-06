@@ -19,7 +19,8 @@ long (64bit)
 float(32bit) 소수점 7자리
 double(64bit) 소수점 14자리
 
-<pre><code>fun main(args: Array<String>) {
+```kotlin
+fun main(args: Array<String>) {
     var number1 : Byte = 127
     var number2 : Short = 32767
     var number3 : Int = 21_0000_0000
@@ -48,7 +49,7 @@ double(64bit) 소수점 14자리
     println(number11.javaClass.name)
     println(number12.javaClass.name)
 }
-</code></pre>
+```
 
 글자
 -글자 한개만 담음
@@ -64,7 +65,8 @@ double(64bit) 소수점 14자리
 - String 입력해서 선언
 - "큰 따옴표를 이용해서 입력
 - 
-<code><pre>fun main(args: Array<String>) {
+```kotlin
+fun main(args: Array<String>) {
     var character : Char = 'A'
     var boolean : Boolean = true
     var string : String = "Hello World!"
@@ -77,13 +79,14 @@ double(64bit) 소수점 14자리
     println(boolean.javaClass.name)
     println(string.javaClass.name)
 }
-</code></pre>
+```
 
 배열
 - 2차원 데이터
 - Array<데이터 형식> 입력해서 선언
 
-<pre><code>fun main(args: Array<String>) {
+```kotlin
+fun main(args: Array<String>) {
     var intArray : Array<Int> = arrayOf(1,2,3)
     var charArray : Array<Char> = arrayOf('A', 'B')
     var stringArray : Array<String> = arrayOf("My", "Name")
@@ -94,7 +97,7 @@ double(64bit) 소수점 14자리
     println(stringArray.toList())
     println(boolArray.toList())
 }
-</code></pre>
+```
 
 
 상수
@@ -103,8 +106,9 @@ double(64bit) 소수점 14자리
 - 초기값 필요
 - val 선언
 
-<pre><code>val test = 1
-</code></pre>
+```kotlin
+val test = 1
+```
 
 ## 연산자
 대입 연산자
@@ -114,7 +118,7 @@ double(64bit) 소수점 14자리
 산술 연산자
 +,-,*,/,%
 
-<pre><code>
+```kotlin
 fun main(args: Array<String>) {
     var x = 7
     var y = 3
@@ -125,7 +129,7 @@ fun main(args: Array<String>) {
     println(x / y)
     println(x % y)
 }
-</code></pre>
+```
 
 비교 연산자
 x > y
@@ -135,7 +139,8 @@ x <= y
 x == y
 x != y
 
-<pre><code>fun main(args: Array<String>) {
+```kotlin
+fun main(args: Array<String>) {
     var x = 7
     var y = 3
     var z = 7
@@ -147,7 +152,7 @@ x != y
     println(x == z)
     println(x != z)
 }
-</code></pre>
+```
 
 범위 연산자
 (자바에 없는 기능)
@@ -156,14 +161,15 @@ x != y
 => x in 1..10
 1 <= x <= 10
 
-<pre><code>fun main(args: Array<String>) {
+```kotlin
+fun main(args: Array<String>) {
     var x = 1
     var y = 11
     
     println(x in 1..10)
     println(y !in 1..10)
 }
-</code></pre>
+```
 
 ## 접근 권한
 private
@@ -197,7 +203,8 @@ for
 ## if
 if, else if, else
 
-<pre><code>fun main(args: Array<String>) {
+```kotlin
+fun main(args: Array<String>) {
     var x = 7
     var y = 3
     
@@ -214,12 +221,13 @@ if, else if, else
         println("x값과 y값이 서로 어느것도 크지 않습니다")
     }
 }
-</code></pre>
+```
 
 ## When문
 다른 언어의 switch 문과 값음
 
-<pre><code>fun main(args: Array<String>) {
+```kotlin
+fun main(args: Array<String>) {
     var x = 1
     
     when(x)
@@ -231,7 +239,7 @@ if, else if, else
         }
     }
 }
-</code></pre>
+```
 
 ## For문
 Range For문
@@ -240,7 +248,8 @@ for (변수 in 1..10 step 2)
 Collection For문
 for (item in collection)
 
-<pre><code>fun main(args: Array<String>) {
+```kotlin
+fun main(args: Array<String>) {
     for (x in 1..10 step 2)
     {
         println(x)
@@ -252,10 +261,11 @@ for (item in collection)
         println(item)
 	}
 }
-</code></pre>
+```
 
 ## While문
-<pre><code>fun main(args: Array<String>) {
+```kotlin
+fun main(args: Array<String>) {
 	var x = 0
     
     while (x < 5)
@@ -265,17 +275,19 @@ for (item in collection)
 	}
     println("끝")
 }
-</code></pre>
+```
 
 ## Function
 함수, 메서드라고 부름
 
-<pre><code>fun 이름 (입력값) : 리턴값 {
+```kotlin
+fun 이름 (입력값) : 리턴값 {
 	return 리턴
 }
-</code></pre>
+```
 
-<pre><code>fun main(args: Array<String>) {
+```kotlin
+fun main(args: Array<String>) {
 	
 	var x = 36
     println(addFour(x))
@@ -286,7 +298,7 @@ fun addFour(input : Int) : Int
     var total = input + 4
     return total
 }
-</code></pre>
+```
 
 ## Class
 class (클래스명) {
@@ -295,7 +307,8 @@ class (클래스명) {
 	}
 }
 
-<pre><code>class Human
+```kotlin
+class Human
 {
     val country : String = "한국"
     val gender : String = "남"
@@ -310,7 +323,7 @@ fun main(args: Array<String>) {
 	var h1 = Human()
     h1.printHumanInfo()   
 }
-</code></pre>
+```
 
 ## Inheritance
 open class (클래스명) {
@@ -328,7 +341,7 @@ open class Person: Human(){
 	override val name = "민준"
 }
 
-<pre><code>
+```kotlin
 open class Human
 {
     open val country : String = "한국"
@@ -344,7 +357,7 @@ class American :Human()
     override val country : String = "미국"
     override val name : String = "minjun"
 }
-</code></pre>
+```
 
 
 ## Interface
@@ -355,7 +368,8 @@ interface CarInterface{
 	fun test2()
 }
 
-<pre><code>interface CarInterface{
+```kotlin
+interface CarInterface{
     fun vibraction(wave : String)
 }
 
@@ -383,7 +397,7 @@ open class Human : CarInterface
         println("나라는 $country 성별은 $gender 이름은 $name 입니다.")
     }
 }
-</code></pre>
+```
 
 ## Nested Class
 중첩 클래스, 클래스 내부 클래스
@@ -396,7 +410,8 @@ data class Student(
 
 데이터 전용 클래스 구현체들이 정의되어 있음 tostring 같은
 	
-<pre><code>data class Student(
+```kotlin
+data class Student(
 	var grade: Int,
     var name : String,
     var gender : String,
@@ -415,7 +430,7 @@ fun main(args: Array<String>) {
     println(howl3.hashCode())
     println(howl.equals(howl2))
 }
-</code></pre>
+```
 
 ## NullSafety
 null point exception
@@ -442,7 +457,8 @@ var name : String? = "하울"
 howl = name X
 howl = name!! 
 
-<pre><code>fun main(args: Array<String>) {
+```kotlin
+fun main(args: Array<String>) {
 	var howl : String? = null
     var name : String? = "하울"
     
@@ -461,6 +477,4 @@ howl = name!!
     test1 = test2!!
     println(test1)
 }
-</code></pre>
-
-
+```
